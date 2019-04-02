@@ -18,7 +18,8 @@ class ProjectsController extends Controller
     {
         //validate
         //persist
-        App\Project::create(request(['title', 'description']));
+        Project::create(request(['title', 'description']));
         //redirect
+        return redirect('/projects');
     }
 }
